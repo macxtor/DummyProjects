@@ -57,8 +57,11 @@ kapt {
 }
 dependencies {
     implementation "com.google.dagger:hilt-android:$hilt_version"
+    implementation "androidx.hilt:hilt-navigation-compose:$hilt_navigation"
+    implementation "io.coil-kt:coil-compose:$coil"
     kapt "com.google.dagger:hilt-compiler:$hilt_version"
     implementation "androidx.core:core-ktx:$android_core"
+    implementation "androidx.navigation:navigation-compose:$navigation"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_ktx"
     implementation "androidx.activity:activity-compose:$activity_compose"
     implementation "androidx.compose.ui:ui:$compose_ui_version"
