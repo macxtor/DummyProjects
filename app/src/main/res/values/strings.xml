@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">dummy_products</string>
+    <string name="product_thumbnail_image">product image</string>
 </resources>
