@@ -8,7 +8,7 @@ import com.macxtor.dummy_products.domain.repository.ProductsRepository
 import javax.inject.Inject
 
 class ProductsRepositoryImpl @Inject constructor(
-    val productApiService: ProductsApiService
+    private val productApiService: ProductsApiService
 ) : ProductsRepository {
 
     override suspend fun getAllProducts(): Result<List<Product>> {
