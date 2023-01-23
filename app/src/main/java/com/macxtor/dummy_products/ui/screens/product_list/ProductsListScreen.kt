@@ -1,6 +1,7 @@
 package com.macxtor.dummy_products.ui.screens.product_list
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -11,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -70,10 +72,11 @@ fun ProductCard(product: Product) {
             Image(
                 painter = rememberAsyncImagePainter(product.thumbnail),
                 contentDescription = stringResource(id = R.string.product_thumbnail_image),
-                contentScale = ContentScale.Crop,
+                contentScale = ContentScale.Inside,
                 modifier = Modifier
                     .height(150.dp)
                     .width(200.dp)
+                    .background(color = Color.LightGray)
             )
             Text(
                 product.category,
@@ -87,7 +90,7 @@ fun ProductCard(product: Product) {
             )
             Text(
                 product.brand,
-                style = MaterialTheme.typography.body2,
+                style = MaterialTheme.typography.body2.copy(color = Color.Red),
                 modifier = Modifier.padding(
                     start = spacing_16,
                     end = spacing_16,
