@@ -17,6 +17,10 @@ The presentation layer is responsible for displaying data to the user and handli
 
 By using Clean Architecture, we can ensure that the different layers of the application are independent and can be tested and developed separately.
 
+## Continuous Integration with CircleCI
+
+We use [CircleCI](https://circleci.com/) for continuous integration of this project. Every time a pull request is opened or code is pushed to the repository, CircleCI automatically runs a build and runs all the tests. Only if the build passes, the pull request will be able to be merged.
+
 ## Usage
 
 To use this project, clone the repository and import it into Android Studio. You will also need to set up a local development environment for Jetpack Compose, as well as the latest version of the Android SDK.
